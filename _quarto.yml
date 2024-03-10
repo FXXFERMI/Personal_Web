@@ -3,19 +3,38 @@ project:
   output-dir: docs
 
 website:
-  title: "Siqi Fei/ Fermi"
+  title: "Siqi Fei | Fermi"
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-      - href: Siqi_Fei-Resume.pdf
-        text: CV
+    tools:
+      - icon: envelope
+        text: Email
+        href: "mailto:fermi.fei@mail.utoronto.ca"  
         
+      - icon: github
+        text: GitHub
+        url: https://github.com/FXXFERMI
+        
+      - icon: linkedin
+        text: LinkedIn
+        href: https://www.linkedin.com/in/siqi-fei-0221solar
 
+    left:
+      - text: HOME
+        href: index.qmd
+        
+      - text: ABOUT
+        href: about.qmd
+        
+      - text: CLUB
+        href: ptputm.qmd
+        
+      - text: CV
+        href: Siqi_Fei-Resume.pdf
+    
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: lux
     css: styles.css
     toc: true
 

@@ -1,9 +1,23 @@
----
-title: "About"
----
+## Hi!
 
-About this site
+I'm Fermi, an international student currently pursuing my passion for computer science and statistics at the University of Toronto Mississauga. With a Specialist in Computer Science and a Minor in Statistics, I'm deeply engaged in my third year of university, marking my second year here in Canada.
 
-```{r}
-1 + 1
-```
+### Personality
+
+Driven by an insatiable curiosity and a thirst for knowledge, I thrive on facing new challenges. Whether it's navigating through work terms or excelling in my academic pursuits, overcoming obstacles fuels my growth and allows me to continuously evolve. My ultimate satisfaction lies in applying the knowledge I acquire to real-world scenarios, which is why I decided to study abroad.
+
+### Activities
+
+Outside of academics, I serve as the co-president of Pet the Pets UTM student Club. Together with a passionate team, we're dedicated to making a positive impact on the lives of lost and abandoned animals in our community. If you're interested in learning more about our initiatives, feel free to click CLUB for additional information.
+
+### My Cat
+
+I have a cat named 20, she is a perfect dog cat.
+
+::: {layout="[[50,50], [100]]"}
+![](20.jpg)
+
+![](2.png)
+
+![](me.png)
+:::

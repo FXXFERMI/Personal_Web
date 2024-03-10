@@ -1,0 +1,32 @@
+---
+title: "Siqi Fei | Fermi"
+image: 证件照_副本.jpg
+toc: false
+about: 
+  template: trestles
+  image-shape: round
+  image-width: 20em
+  links:
+    - text: LinkedIn
+      icon: linkedin
+      href: https://www.linkedin.com/in/siqi-fei-0221solar
+      
+    - text: GitHub
+      icon: github
+      href: https://github.com/FXXFERMI
+      
+    - text: Email
+      icon: envelope
+      href: "mailto:fermi.fei@mail.utoronto.ca"  
+---
+
+## Welcome to Fermi’s Personal Website!
+
+Thanks for stopping by my little corner of the internet! My name is Siqi Fei.
+you can call my Fermi, and I'm excited to meet you!
+
+## Education
+Undergraduate Student (2020 - Current) | University of Toronto Mississauga
+
+
+
