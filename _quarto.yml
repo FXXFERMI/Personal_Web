@@ -19,17 +19,22 @@ website:
         href: https://www.linkedin.com/in/siqi-fei-0221solar
 
     left:
-      - text: HOME
+      - text: HOME | 主页面
         href: index.qmd
         
-      - text: ABOUT
+      - text: ABOUT | 关于
         href: about.qmd
         
-      - text: CLUB
+      - text: CLUB | 社团
         href: ptputm.qmd
         
-      - text: CV
-        href: Siqi_Fei-Resume.pdf
+      - text: CV | 简历
+        href: Siqi Fei_Resume.pdf
+        
+      - text: Portfolio | 作品集
+        menu: 
+        - STA_Portfolio.qmd
+        - CS_Portfolio.qmd
     
 format:
   html:
