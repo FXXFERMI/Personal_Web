@@ -16,7 +16,7 @@ website:
         
       - icon: linkedin
         text: LinkedIn
-        href: https://www.linkedin.com/in/siqi-fei-0221solar
+        href: https://www.linkedin.com/in/siqi-fermi-fei
 
     left:
       - text: HOME | 主页面
@@ -29,7 +29,7 @@ website:
         href: ptputm.qmd
         
       - text: CV | 简历
-        href: Siqi Fei_Resume.pdf
+        href: Newest_Resume.pdf
         
       - text: Portfolio | 作品集
         menu: 

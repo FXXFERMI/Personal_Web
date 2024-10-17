@@ -1,6 +1,6 @@
 ---
 title: "Siqi Fei | Fermi"
-image: 证件照_副本.jpg
+image: newest_self.PNG
 toc: false
 about: 
   template: trestles
@@ -9,7 +9,7 @@ about:
   links:
     - text: LinkedIn
       icon: linkedin
-      href: https://www.linkedin.com/in/siqi-fei-0221solar
+      href: https://www.linkedin.com/in/siqi-fermi-fei
       
     - text: GitHub
       icon: github
