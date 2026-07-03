@@ -94,7 +94,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
           {/* Email Card */}
           <a
-            href="mailto:siqi.fei@mail.utoronto.ca"
+            href="mailto:fermi.fei@mail.utoronto.ca"
             className="group p-6 rounded-lg border border-border bg-card hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-foreground/30 relative overflow-hidden animate-fade-in-up animation-delay-800"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -113,7 +113,7 @@ export default function Home() {
 
           {/* Phone Card */}
           <a
-            href="tel:+16478662089"
+            href="tel:+14373625444"
             className="group p-6 rounded-lg border border-border bg-card hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-foreground/30 relative overflow-hidden animate-fade-in-up animation-delay-900"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
