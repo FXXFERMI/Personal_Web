@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Siqi Fei | Fermi"
+  navbar:
+    tools:
+      - icon: envelope
+        text: Email
+        href: "mailto:fermi.fei@mail.utoronto.ca"  
+        
+      - icon: github
+        text: GitHub
+        url: https://github.com/FXXFERMI
+        
+      - icon: linkedin
+        text: LinkedIn
+        href: https://www.linkedin.com/in/siqi-fermi-fei
+
+    left:
+      - text: HOME | 主页面
+        href: index.qmd
+        
+      - text: ABOUT | 关于
+        href: about.qmd
+        
+      - text: CLUB | 社团
+        href: ptputm.qmd
+        
+      - text: CV | 简历
+        href: Newest_Resume.pdf
+        
+      - text: Portfolio | 作品集
+        menu: 
+        - STA_Portfolio.qmd
+        - CS_Portfolio.qmd
+    
+format:
+  html:
+    theme: 
+      light: lux
+    css: styles.css
+    toc: true
+
+
+
