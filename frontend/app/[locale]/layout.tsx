@@ -7,7 +7,7 @@ import { ThemeScript } from "@/components/theme-script";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { locales } from '@/i18n/request';
+import { routing } from '@/i18n/routing';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({
@@ -44,7 +44,7 @@ export default async function RootLayout({
   const { locale } = await params;
   
   // Ensure that the incoming `locale` is valid
-  if (!locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
