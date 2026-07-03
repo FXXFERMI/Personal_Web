@@ -8,26 +8,43 @@
   },
   "home": {
     "title": "欢迎来到我的个人网站",
-    "subtitle": "你好，我是费丝棋。探索我的工作、经验和兴趣。",
+    "subtitle": "嗨，我是 Siqi Fei，也可以叫我 Fermi。欢迎来到我的小角落，这里放着我做过的项目、一些想法，还有我还在不断探索的新东西。",
     "aboutMe": "关于我",
     "viewPortfolio": "查看作品集",
     "downloadCV": "下载简历",
-    "aboutCard": {
-      "title": "关于",
-      "description": "了解更多关于我的背景、技能和兴趣。"
-    },
-    "portfolioCard": {
-      "title": "作品集",
-      "description": "查看我的项目和作品样本。"
-    },
-    "clubCard": {
-      "title": "社团",
-      "description": "了解我的社团活动和参与情况。"
+    "contactCards": {
+      "email": {
+        "title": "邮箱",
+        "value": "fermi.fei@mail.utoronto.ca"
+      },
+      "phone": {
+        "title": "电话",
+        "value": "+1 (437) 362-5444"
+      },
+      "linkedin": {
+        "title": "领英",
+        "value": "siqi-fermi-fei"
+      },
+      "github": {
+        "title": "GitHub",
+        "value": "FXXFERMI"
+      }
     }
   },
   "about": {
-    "title": "关于我",
-    "description": "了解更多关于我的背景、技能和兴趣。"
+    "title": "嗨！",
+    "description": "关于我的经历、技能，还有一些我感兴趣的事。",
+    "subtitle": "我是 Siqi Fei，大家一般都叫我 Fermi。",
+    "intro": "我目前在多伦多大学密西沙加校区读计算机科学和统计学。平时大部分时间都在写代码、带课、折腾 AI，偶尔也会遇到那种“别人一走过来，bug 就自己好了”的神奇时刻。\n\n我比较喜欢全栈开发、AI、数据，还有那些能把麻烦事情变得没那么麻烦的小工具。比起只做一个看起来很酷的 demo，我更喜欢做真正有人能用、也愿意用的东西。",
+    "aboutMeTitle": "关于我",
+    "aboutMeContent": "我是那种很容易对新东西产生兴趣的人。遇到没做过的项目、没见过的代码库，或者一个奇怪到不行的报错，通常都会想弄明白它到底怎么回事。\n\n我喜欢把一个还很模糊的想法慢慢做成能跑、能用的东西。这个过程当然也经常伴随着一堆没关的标签页、熬夜，还有一些“先这样吧，以后再改”的临时方案。\n\n出国读书对我影响也挺大。它让我接触到很多不同的人和想法，也让我慢慢习惯了在一开始什么都不太懂的时候，先走进去再说。",
+    "workTitle": "我做过的技术工作",
+    "workContent": "我的经历大概横跨研究、教学、产品和工程。我在学校实验室做过研究，也当过助教，还在 IBM watsonx 做过产品管理和软件工程相关的工作。\n\n这些经历里，我接触过全栈开发、AI 模型评测，还有一些数据驱动的内部工具。我喜欢做实用的系统，也喜欢看它们在真实场景里到底好不好用，而不是只停留在“理论上应该可以”。\n\n我对 AI 很感兴趣，不只是因为它很厉害，而是因为它能让很多原本看起来很远、很难进入的领域变得更容易接近一点。它让更多人有机会去探索、学习、创造，也能去做以前可能不太敢尝试的事。",
+    "nonTechTitle": "一点和技术没关系的事",
+    "nonTechContent": "除了学校和工作，我也一直很喜欢动物。我做过动物救助相关的志愿工作，也帮忙寄养过一些小动物，还和朋友一起做过支持本地动物福利的学生社群活动。\n\n我有一只猫，叫 Twenty。她表面上是猫，实际上更像一只很黏人的小狗：好奇、戏多，而且坚信自己才是这个家的负责人。她不会写代码，但每次我 debug 的时候都很有参与感。\n\n和救助动物打交道让我学会了不少东西，比如耐心、随机应变，还有在计划突然乱掉的时候先别慌。这些放到写代码里居然也挺有用。",
+    "viewClub": "看看我们的社团",
+    "viewCV": "查看简历",
+    "viewPortfolio": "看看我的作品"
   },
   "club": {
     "title": "社团活动",
@@ -35,10 +52,163 @@
   },
   "cv": {
     "title": "个人简历",
-    "description": "查看和下载我的简历。"
+    "description": "查看和下载我的简历。",
+    "education": {
+      "title": "教育背景",
+      "school": "多伦多大学",
+      "degree": "计算机科学与统计学荣誉理学士",
+      "graduation": "预计毕业时间：2026年",
+      "awards": "奖项：多伦多大学奖学金（2020-21秋冬学期）"
+    },
+    "experience": {
+      "title": "工作经历",
+      "ibmBob": {
+        "title": "AI模型工程师与全栈开发工程师",
+        "company": "IBM加拿大 WatsonX Bob Core",
+        "period": "2025年8月 – 至今",
+        "point1": "使用React、TypeScript和Node.js构建全栈仪表板，将AI模型评估效率提高40%。",
+        "point2": "在多个企业领域微调和评估100多个大型语言模型（LLM）。",
+        "point3": "设计交互式UI以可视化50,000多个模型指标，实现更快、更准确的性能比较。",
+        "point4": "遵循IBM的Carbon设计系统和内部合规标准，开发安全、可扩展的后端服务。",
+        "point5": "利用LLM辅助工具将开发周期加速25%，并增强测试覆盖率。",
+        "point6": "协调AI模型评估平台的产品策略和功能路线图，使技术目标与用户需求保持一致。"
+      },
+      "ibmPM": {
+        "title": "产品经理",
+        "company": "IBM加拿大 WatsonX Code Assistant",
+        "period": "2025年5月 – 2025年9月",
+        "point1": "为内部AI模型评估和微调平台定义产品愿景和路线图。",
+        "point2": "促进冲刺规划和跨职能沟通，将交付速度提高20%。",
+        "point3": "与AI研究人员、工程师和设计团队合作，使开发优先级与用户需求保持一致。",
+        "point4": "收集并分析来自50多个企业用户的反馈，指导功能设计和可用性改进。"
+      },
+      "uoft": {
+        "title": "助教",
+        "company": "多伦多大学 - CSC309网页编程、CSCC01软件工程",
+        "period": "2025年1月 – 2026年4月",
+        "point1": "进行辅导并支持学生理解课程材料。",
+        "point2": "与同事合作确保与课程目标保持一致。",
+        "point3": "通过互动交流平台促进学生参与。",
+        "point4": "评估学生作业并为公平评估实践做出贡献。"
+      },
+      "mintc": {
+        "title": "全栈网页开发工程师",
+        "company": "MintC. Proverbs拍卖",
+        "period": "2024年5月 – 2024年9月",
+        "point1": "使用React和JavaScript构建响应式前端组件。",
+        "point2": "使用Django开发后端API并集成PostgreSQL/MySQL数据库。",
+        "point3": "使用GraphQL简化数据查询，并使用RSA和AES加密保护数据。",
+        "point4": "进行自动化QA测试，将停机时间减少30%。"
+      }
+    },
+    "projects": {
+      "title": "项目经历",
+      "ramseyLab": {
+        "title": "多伦多大学Ramsey实验室深度学习算法",
+        "period": "2025年11月 – 至今",
+        "point1": "训练CNN模型（VGG19、ResNet）用于考古研究中的植硅体图像分类。",
+        "point2": "使用Python和PyTorch在GPU服务器上开发可重现的计算机视觉管道。",
+        "point3": "应用可视化和错误分析技术（如Grad-CAM）来解释模型行为。"
+      },
+      "mlDev": {
+        "title": "机器学习模型开发",
+        "period": "2024年1月 – 至今",
+        "point1": "领导创建和改进用于高级预测建模的机器学习算法。",
+        "point2": "指导团队整合AI技术，实现实用且有影响力的结果。",
+        "point3": "通过全面的验证流程确保模型的准确性和可靠性。"
+      }
+    },
+    "skills": {
+      "title": "技能",
+      "programming": {
+        "title": "编程技能"
+      },
+      "technical": {
+        "title": "技术工具"
+      },
+      "professional": {
+        "title": "专业技能"
+      },
+      "languages": {
+        "title": "语言能力"
+      }
+    },
+    "download": {
+      "title": "下载完整简历",
+      "description": "获取我的详细PDF版简历。",
+      "button": "下载PDF",
+      "viewPortfolio": "查看作品集"
+    }
   },
   "portfolio": {
-    "title": "作品集",
-    "description": "查看我的项目和作品样本。"
+    "title": "项目作品集",
+    "description": "展示软件工程和数据科学项目的作品集，涵盖全栈开发、AI/ML应用和统计分析等领域。",
+    "categories": {
+      "all": "全部",
+      "statistics": "统计学",
+      "Computer Science": "计算机科学"
+    },
+    "vehicleTheft": {
+      "title": "消费者价格指数变化与车辆盗窃频率之间的相互作用",
+      "description": "研究探讨了消费者价格指数（CPI）变动对多伦多车辆盗窃率的影响，使用多元回归模型分析不同CPI类别与车辆盗窃频率之间的相关性，为经济政策和犯罪预防策略提供重要见解。"
+    },
+    "electionForecast": {
+      "title": "收入与性别：预测2018年美国选民的选择",
+      "description": "关于2018年美国选举的研究，分析了收入和性别对选民投票行为的预测力，利用2018年合作国会选举研究（CCES）数据集，通过统计模型检验假设。"
+    },
+    "nflPrediction": {
+      "title": "NFL传球效率预测",
+      "description": "分析并预测2023 NFL赛季中四分卫的传球效率，使用了传球预期得分增加（passing_epa）指标，运用统计分析和机器学习技术构建预测模型。"
+    },
+    "footballModeling": {
+      "title": "足球控球效率建模",
+      "description": "利用泊松回归和负二项回归模型，分析德甲联赛（2023-2024赛季）中球队控球对比赛进球结果的影响，提炼出球队触球频率与进球成功率之间的关系。"
+    },
+    "holocaustViz": {
+      "title": "通过Shiny应用探索大屠杀的伦理和人文参与",
+      "description": "开发了一个Shiny应用，用于交互式地展示大屠杀受害者的民族来源和人数，特别关注奥斯威辛集中营的受害者。项目旨在通过数据的尊严呈现，致敬受害者的记忆。"
+    },
+    "ibmWatsonx": {
+      "title": "IBM watsonx AI模型评测与开发者工具",
+      "description": "参与 AI 模型评测和内部全栈工具开发。评测超过100个大语言模型，使用 React 开发数据看板，通过自动化和 LLM 辅助工具提升评测流程效率。"
+    },
+    "phytolithCV": {
+      "title": "小麦植硅体细粒度图像分类",
+      "description": "开发用于识别不同小麦物种的多细胞植硅体图像分类模型。使用 VGG19、ResNet-18、Vision Transformer 和 YOLOv8 构建分类基线模型，建立可复现的训练流程。"
+    },
+    "utbook": {
+      "title": "UTBook：计算机科学课程学习与评测平台",
+      "description": "面向计算机科学课程的全栈在线学习和课程管理平台。将作业提交、自动测试、面试协调和 office hour 预约整合到同一个平台中。"
+    },
+    "taPlatform": {
+      "title": "UTM助教申请管理平台",
+      "description": "面向多伦多大学密西沙加校区助教申请流程的网页平台。集中管理助教申请信息、课程偏好和管理员审核流程。"
+    },
+    "auctionPlatform": {
+      "title": "在线拍卖平台开发",
+      "description": "参与在线拍卖平台的开发和维护。使用 React 和 Material UI 开发响应式前端功能，与 Django REST Framework API 进行集成。"
+    },
+    "animalRescue": {
+      "title": "动物救助组织网站开发",
+      "description": "在 Save Fur Pets Animal Rescue 担任志愿软件工程师。开发及维护网站功能，使用 Cypress 编写端到端测试，通过技术支持动物救助工作。"
+    },
+    "teachingTools": {
+      "title": "CSC309交互式编程练习与自动评测",
+      "description": "设计编程练习和自动化测试流程用于网页开发教学。使用 GitHub Classroom 和 Vitest 创建单元测试和自动反馈流程，每节课支持约60名学生。"
+    },
+    "foodClassification": {
+      "title": "基于机器学习的食物偏好分类",
+      "description": "基于问卷回答预测用户食物偏好的机器学习项目。比较多种分类模型，使用神经网络在最终测试集上取得约84%的准确率。"
+    },
+    "viewGithub": "在GitHub上查看",
+    "viewDemo": "查看演示",
+    "viewProduct": "访问产品",
+    "confidential": "保密项目",
+    "cta": {
+      "title": "有兴趣合作吗？",
+      "description": "我随时欢迎讨论新项目、创意想法或合作机会。",
+      "viewCV": "查看我的简历",
+      "learnMore": "了解更多"
+    }
   }
 }

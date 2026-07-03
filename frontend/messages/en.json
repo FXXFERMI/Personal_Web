@@ -7,27 +7,44 @@
     "portfolio": "Portfolio"
   },
   "home": {
-    "title": "Welcome to My Personal Website",
-    "subtitle": "Hi, I'm Siqi Fei. Explore my work, experience, and interests.",
+    "title": "Welcome :')",
+    "subtitle": "Hi, I'm Siqi Fei, though you'll probably see me as Fermi around here. Welcome to my little collection of projects and ideas.",
     "aboutMe": "About Me",
     "viewPortfolio": "View Portfolio",
     "downloadCV": "Download CV",
-    "aboutCard": {
-      "title": "About",
-      "description": "Learn more about my background, skills, and interests."
-    },
-    "portfolioCard": {
-      "title": "Portfolio",
-      "description": "Check out my projects and work samples."
-    },
-    "clubCard": {
-      "title": "Club",
-      "description": "Discover my club activities and involvement."
+    "contactCards": {
+      "email": {
+        "title": "Email",
+        "value": "ermi.fei@mail.utoronto.ca"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+1 (437) 362-5444"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "value": "siqi-fermi-fei"
+      },
+      "github": {
+        "title": "GitHub",
+        "value": "FXXFERMI"
+      }
     }
   },
   "about": {
-    "title": "About Me",
-    "description": "Learn more about my background, skills, and interests."
+    "title": "Hi!",
+    "description": "Learn more about my background, skills, and interests.",
+    "subtitle": "I'm Siqi Fei. Most people know me as Fermi",
+    "intro": "I'm a Computer Science and Statistics student at the University of Toronto Mississauga. I spend a lot of my time building things, teaching things, testing AI things, and occasionally wondering why the bug disappears the moment someone else looks at my screen.\n\nI'm especially interested in full-stack development, AI, data, and tools that make complicated work feel a little more manageable. I like projects that sit somewhere between \"this is technically interesting\" and \"people could actually use this.\"",
+    "aboutMeTitle": "About Me",
+    "aboutMeContent": "I'm curious by default and usually happiest when I am learning something new.\n\nThat could mean building a dashboard, working through an unfamiliar codebase, evaluating an AI model, or trying to understand why a system behaves perfectly in development and mysteriously fails in production. I enjoy the process of turning vague ideas into real products, even when it means too many tabs, too little sleep, and at least one workaround I probably should not be proud of.\n\nStudying abroad has also shaped a big part of who I am. It pushed me outside of my comfort zone, introduced me to people with very different perspectives, and taught me that growth often starts when you have no idea what you are doing yet.",
+    "workTitle": "About My Work in Tech",
+    "workContent": "My experience in tech has taken me from research and teaching to product and engineering work. I have worked as a research assistant in a university lab, supported students as a teaching assistant, and contributed to IBM watsonx in both product management and software engineering roles.\n\nAcross these experiences, I have worked with full-stack development, AI model evaluation, and data-driven tools. I enjoy building practical systems, testing how they behave in real situations, and turning rough ideas into something people can actually use.\n\nI'm especially interested in AI because it makes big, unfamiliar spaces feel a little more reachable. It gives people more ways to explore, create, learn, and step into fields they might not have had access to before.",
+    "nonTechTitle": "A Small Non-Tech Detail",
+    "nonTechContent": "Outside of work and school, I care a lot about animals. I have volunteered with animal rescue, helped foster animals, and spent time supporting local animal-welfare initiatives through student community work.\n\nI also have a cat named Twenty. She is technically a cat, but emotionally she is a dog: clingy, curious, dramatic, and fully convinced that she is in charge of everything. She may not write code, but she provides strong opinions during every debugging session.\n\nWorking with rescue animals has taught me a lot about patience, adaptability, and staying calm when plans suddenly change — skills that are surprisingly useful in both life and software development.",
+    "viewClub": "Learn About Our Club",
+    "viewCV": "View My CV",
+    "viewPortfolio": "See My Work"
   },
   "club": {
     "title": "Club Activities",
@@ -35,10 +52,163 @@
   },
   "cv": {
     "title": "Curriculum Vitae",
-    "description": "View and download my CV."
+    "description": "View and download my CV.",
+    "education": {
+      "title": "Education",
+      "school": "University of Toronto",
+      "degree": "Honours Bachelor of Science (H.BSc) in Computer Science and Statistics",
+      "graduation": "Expected Graduation: 2026",
+      "awards": "Awards: University of Toronto Scholarship (2020-21 Fall/Winter Session)"
+    },
+    "experience": {
+      "title": "Experience",
+      "ibmBob": {
+        "title": "AI Model Engineering & Full-Stack Developer",
+        "company": "IBM Canada WatsonX Bob Core",
+        "period": "August 2025 – Current",
+        "point1": "Built full-stack dashboards with React, TypeScript, and Node.js, improving AI model evaluation efficiency by 40%.",
+        "point2": "Fine-tuned and evaluated 100+ large language models (LLMs) across multiple enterprise domains.",
+        "point3": "Designed interactive UIs to visualize 50K+ model metrics, enabling faster and more accurate performance comparisons.",
+        "point4": "Developed secure, scalable backend services following IBM's Carbon Design System and internal compliance standards.",
+        "point5": "Utilized LLM-assisted tools to accelerate development cycles by 25% and enhance testing coverage.",
+        "point6": "Coordinated product strategy and feature roadmap for AI model evaluation platforms, aligning technical goals with user needs."
+      },
+      "ibmPM": {
+        "title": "Product Manager",
+        "company": "IBM Canada WatsonX Code Assistant",
+        "period": "May 2025 – September 2025",
+        "point1": "Defined product vision and roadmap for internal AI model evaluation and fine-tuning platforms.",
+        "point2": "Facilitated sprint planning and cross-functional communication, improving delivery speed by 20%.",
+        "point3": "Collaborated with AI researchers, engineers, and design teams to align development priorities with user needs.",
+        "point4": "Collected and analyzed feedback from 50+ enterprise users to guide feature design and usability improvements."
+      },
+      "uoft": {
+        "title": "Teaching Assistant",
+        "company": "University of Toronto - CSC309 Programming on Web, CSCC01 Software Engineering",
+        "period": "January 2025 – April 2026",
+        "point1": "Conducted tutorials and supported students in understanding course material.",
+        "point2": "Collaborated with colleagues to ensure alignment with course objectives.",
+        "point3": "Facilitated student engagement through interactive communication platforms.",
+        "point4": "Evaluated student work and contributed to fair assessment practices."
+      },
+      "mintc": {
+        "title": "Full-Stack Web Developer",
+        "company": "MintC. Proverbs Auction",
+        "period": "May 2024 – September 2024",
+        "point1": "Built responsive front-end components with React and JavaScript.",
+        "point2": "Developed back-end APIs using Django and integrated PostgreSQL/MySQL databases.",
+        "point3": "Streamlined data queries with GraphQL and secured data with RSA and AES encryption.",
+        "point4": "Conducted automated QA testing, reducing downtime by 30%."
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "ramseyLab": {
+        "title": "University of Toronto Ramsey Lab DL Algorithm",
+        "period": "November 2025 – Current",
+        "point1": "Trained CNN models (VGG19, ResNet) for phytolith image classification in archaeological research.",
+        "point2": "Developed reproducible computer vision pipelines using Python and PyTorch on GPU servers.",
+        "point3": "Applied visualization and error analysis techniques (e.g., Grad-CAM) to interpret model behavior."
+      },
+      "mlDev": {
+        "title": "Machine Learning Model Development",
+        "period": "January 2024 – Current",
+        "point1": "Led the creation and refinement of machine learning algorithms for advanced predictive modeling.",
+        "point2": "Directed a team to integrate AI techniques, achieving practical and impactful results.",
+        "point3": "Ensured accuracy and reliability of models through comprehensive validation processes."
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "programming": {
+        "title": "Programming"
+      },
+      "technical": {
+        "title": "Technical"
+      },
+      "professional": {
+        "title": "Professional"
+      },
+      "languages": {
+        "title": "Languages"
+      }
+    },
+    "download": {
+      "title": "Download Full CV",
+      "description": "Get a detailed PDF version of my curriculum vitae.",
+      "button": "Download PDF",
+      "viewPortfolio": "View Portfolio"
+    }
   },
   "portfolio": {
-    "title": "Portfolio",
-    "description": "Check out my projects and work samples."
+    "title": "Project Portfolio",
+    "description": "A collection of software engineering and data science projects showcasing full-stack development, AI/ML applications, and statistical analysis.",
+    "categories": {
+      "all": "All",
+      "statistics": "Statistics",
+      "Computer Science": "Computer Science"
+    },
+    "vehicleTheft": {
+      "title": "The Interplay Between CPI Changes and Vehicle Theft Frequencies",
+      "description": "This study employs multiple regression models to identify correlations between various CPI categories and the frequency of vehicle thefts in Toronto, offering insights that could influence economic and crime prevention policies."
+    },
+    "electionForecast": {
+      "title": "Forecasting the American Voters' Choices in 2018",
+      "description": "This study examines the predictive power of income and gender on voting behavior in the 2018 US elections using the Cooperative Congressional Election Study (CCES) 2018 dataset."
+    },
+    "nflPrediction": {
+      "title": "NFL Passing Efficiency Forecasting",
+      "description": "Analysis and predictive modeling for the 2023 NFL season, focusing on forecasting the passing efficiency of quarterbacks using the passing expected points added (passing_epa) metric."
+    },
+    "footballModeling": {
+      "title": "Modeling the Efficacy of Possession in Football",
+      "description": "This study examines the impact of ball possession on scoring outcomes in Bundesliga matches (2023-2024 season), employing both Poisson and negative binomial regression models to unravel the relationship between home team ball touches and goal scoring success."
+    },
+    "holocaustViz": {
+      "title": "Navigating Ethics and Engagement in Visualizing the Holocaust",
+      "description": "An interactive Shiny app providing visualization of Holocaust victims' ethnic origins and numbers, specifically focusing on those murdered at Auschwitz concentration camp. This project aims to honor victims' memory through dignified data representation."
+    },
+    "ibmWatsonx": {
+      "title": "AI Model Evaluation and Developer Tooling at IBM watsonx",
+      "description": "Working on AI model evaluation and internal full-stack tools for enterprise coding assistants. Evaluated 100+ LLMs, built React dashboards, and improved evaluation workflows through automation and LLM-assisted tooling."
+    },
+    "phytolithCV": {
+      "title": "Fine-Grained Phytolith Image Classification for Wheat Species",
+      "description": "Developing computer vision models to classify multi-cell phytolith images across different wheat species. Built classification baselines using VGG19, ResNet-18, Vision Transformers, and YOLOv8 with reproducible training workflows."
+    },
+    "utbook": {
+      "title": "UTBook: Computer Science Learning and Assessment Platform",
+      "description": "Full-stack online learning and course-management platform for CS education. Features assignment submission, automated testing, interview coordination, and office-hour booking in one centralized system."
+    },
+    "taPlatform": {
+      "title": "UTM Teaching Assistant Application Platform",
+      "description": "Web platform designed to improve the TA application workflow at UTM. Centralizes applicant information, course preferences, and administrative review workflows in one system."
+    },
+    "auctionPlatform": {
+      "title": "Online Auction Platform Development",
+      "description": "Contributed to development and maintenance of an online auction platform. Developed responsive frontend features using React and Material UI, integrated with Django REST Framework APIs."
+    },
+    "animalRescue": {
+      "title": "Animal Rescue Website Development",
+      "description": "Volunteer software engineer for Save Fur Pets Animal Rescue. Developed and maintained website features, created Cypress end-to-end tests, and supported animal rescue operations through technical work."
+    },
+    "teachingTools": {
+      "title": "Interactive Programming Challenges for CSC309",
+      "description": "Designed hands-on programming challenges and automated testing workflows for web-development tutorials. Created unit tests and automated feedback using GitHub Classroom and Vitest for ~60 students per tutorial."
+    },
+    "foodClassification": {
+      "title": "Food Preference Classification Using Machine Learning",
+      "description": "Machine learning project predicting food preferences based on survey responses. Compared multiple classification models and achieved ~84% accuracy on hold-out test set using neural networks."
+    },
+    "viewGithub": "View on GitHub",
+    "viewDemo": "View Demo",
+    "viewProduct": "Visit Product",
+    "confidential": "Confidential Project",
+    "cta": {
+      "title": "Interested in Working Together?",
+      "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+      "viewCV": "View My CV",
+      "learnMore": "Learn More"
+    }
   }
 }
