@@ -1,0 +1,44 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "club": "Club",
+    "cv": "CV",
+    "portfolio": "Portfolio"
+  },
+  "home": {
+    "title": "Welcome to My Personal Website",
+    "subtitle": "Hi, I'm Siqi Fei. Explore my work, experience, and interests.",
+    "aboutMe": "About Me",
+    "viewPortfolio": "View Portfolio",
+    "downloadCV": "Download CV",
+    "aboutCard": {
+      "title": "About",
+      "description": "Learn more about my background, skills, and interests."
+    },
+    "portfolioCard": {
+      "title": "Portfolio",
+      "description": "Check out my projects and work samples."
+    },
+    "clubCard": {
+      "title": "Club",
+      "description": "Discover my club activities and involvement."
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Learn more about my background, skills, and interests."
+  },
+  "club": {
+    "title": "Club Activities",
+    "description": "Discover my club activities and involvement."
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "description": "View and download my CV."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Check out my projects and work samples."
+  }
+}
