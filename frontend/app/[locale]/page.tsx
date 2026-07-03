@@ -81,7 +81,7 @@ export default function Home() {
           {/* Right side - 3D Flip Card */}
           <div className="relative flex w-full justify-center lg:justify-start lg:ml-30 animate-fade-in-up animation-delay-600">
             <FlipCard
-              frontImage="/Profile_Photo.png"
+              frontImage="/Profile_Photo.jpg"
               logoLight="/fermi-logo-text2.png"
               logoDark="/fermi-logo-text2.png"
               alt="Profile Photo"
