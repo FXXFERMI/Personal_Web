@@ -24,7 +24,7 @@
  * after, so the flap and letter animate in the same gesture.
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -44,10 +44,17 @@ export type EnvelopeGateProps = {
 export function EnvelopeGate({ personName, children }: EnvelopeGateProps) {
   const storageKey = `ibm-envelope-opened-${personName.toLowerCase()}`;
 
-  const [phase, setPhase] = useState<Phase>(() => {
-    if (typeof window === "undefined") return "done";
-    return sessionStorage.getItem(storageKey) === "true" ? "done" : "idle";
-  });
+  // Always start "idle" on both server and client so SSR output matches the
+  // initial hydration pass. A useEffect then fast-forwards to "done" when
+  // sessionStorage indicates the envelope was already opened this session.
+  const [phase, setPhase] = useState<Phase>("idle");
+
+  useEffect(() => {
+    if (sessionStorage.getItem(storageKey) === "true") {
+      setPhase("done");
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [storageKey]);
 
   function handleOpen() {
     if (phase !== "idle") return;

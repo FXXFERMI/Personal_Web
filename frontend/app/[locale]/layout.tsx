@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, IBM_Plex_Serif } from "next/font/google";
 import "../globals.css";
 import { Navigation } from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -8,22 +7,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const ibmPlexSerif = IBM_Plex_Serif({
-  variable: "--font-ibm-plex-serif",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Siqi (Fermi) Fei - Personal Website",
@@ -34,7 +17,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params
 }: Readonly<{
@@ -53,24 +36,20 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${ibmPlexSerif.variable} h-full antialiased`}
-      suppressHydrationWarning
-    >
-      <body className={`min-h-full flex flex-col ${locale === 'en' ? 'font-serif' : ''}`}>
-        <ThemeScript />
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            defaultTheme="system"
-            storageKey="siqi-fei-theme"
-          >
+    <>
+      <ThemeScript />
+      <NextIntlClientProvider messages={messages}>
+        <ThemeProvider
+          defaultTheme="system"
+          storageKey="siqi-fei-theme"
+        >
+          <div className={`min-h-full flex flex-col ${locale === 'en' ? 'font-serif' : ''}`}>
             <Navigation />
             <main className="flex-1 pt-16">{children}</main>
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+          </div>
+        </ThemeProvider>
+      </NextIntlClientProvider>
+    </>
   );
 }
 
