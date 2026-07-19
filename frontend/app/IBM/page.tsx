@@ -65,7 +65,7 @@ export default function IBMPage() {
             For the Team
           </h1>
           <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-10">
-            A little something I made for the people who made this internship unforgettable.
+            A small thank-you for an unforgettable internship.
           </p>
           {/* Scroll hint */}
           <div className="flex flex-col items-center gap-2 text-white/50 animate-bounce">
@@ -81,8 +81,8 @@ export default function IBMPage() {
       <section className="flex flex-col items-center justify-center px-4 py-24">
         <div className="w-full max-w-sm">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-foreground mb-2">Your message is waiting</h2>
-            <p className="text-muted-foreground mt-3">Sign in with the account Fermi gave you.</p>
+            <h2 className="text-3xl font-bold text-foreground mb-2">Open Your Letter</h2>
+            {/* <p className="text-muted-foreground mt-3">Sign in with the infor on the card Fermi gave you.</p> */}
           </div>
 
           <form
