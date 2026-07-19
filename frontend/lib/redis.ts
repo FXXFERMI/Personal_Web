@@ -4,24 +4,25 @@ import { Redis } from "@upstash/redis";
 //   UPSTASH_REDIS_REST_URL=https://YOUR-URL.upstash.io
 //   UPSTASH_REDIS_REST_TOKEN=YOUR_TOKEN
 //
-// If either variable is absent (e.g. during local dev without a Redis instance),
-// the module exports null so callers can safely skip Redis operations.
+// Redis is initialised lazily (on first call) so that importing this module
+// during the Next.js build does NOT evaluate the env vars and trigger an error.
 
-function createRedis(): Redis | null {
+let _redis: Redis | null = null;
+
+export function getRedis(): Redis {
+  if (_redis) return _redis;
+
   const url = process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN;
 
   if (!url || !token) {
-    if (process.env.NODE_ENV !== "production") {
-      console.warn(
-        "[redis] UPSTASH_REDIS_REST_URL or UPSTASH_REDIS_REST_TOKEN is not set. " +
-          "Redis features will be disabled."
-      );
-    }
-    return null;
+    throw new Error("Missing Upstash Redis environment variables.");
   }
 
-  return Redis.fromEnv();
-}
+  if (!url.startsWith("https://")) {
+    throw new Error("UPSTASH_REDIS_REST_URL must start with https://");
+  }
 
-export const redis = createRedis();
+  _redis = new Redis({ url, token });
+  return _redis;
+}

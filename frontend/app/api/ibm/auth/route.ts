@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { redis } from "@/lib/redis";
+import { getRedis } from "@/lib/redis";
 import { createHmac, timingSafeEqual } from "crypto";
 
 // Default passwords assigned at launch — stored only on the server.
@@ -89,9 +89,9 @@ export async function POST(req: NextRequest) {
   let authenticated = password === DEFAULT_PASSWORDS[match];
 
   // 2. If not, check custom password from Redis
-  if (!authenticated && redis) {
+  if (!authenticated) {
     try {
-      const custom = await redis.get<string>(redisKey(match));
+      const custom = await getRedis().get<string>(redisKey(match));
       if (custom && password === custom) authenticated = true;
     } catch {
       // Redis error — only default password works as fallback

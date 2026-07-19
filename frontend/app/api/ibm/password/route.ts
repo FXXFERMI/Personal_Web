@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { redis } from "@/lib/redis";
+import { getRedis } from "@/lib/redis";
 
 // Valid usernames — keeps the API from being used for arbitrary keys
 const VALID_NAMES = new Set([
@@ -22,15 +22,14 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  if (!redis) {
-    return NextResponse.json({ customPassword: null }, {
-      headers: { 'Cache-Control': 'no-store' },
-    });
+  let pw: string | null = null;
+  try {
+    pw = await getRedis().get<string>(redisKey(name));
+  } catch {
+    // Redis unavailable — return null gracefully
   }
-
-  const pw = await redis.get<string>(redisKey(name));
   return NextResponse.json({ customPassword: pw ?? null }, {
-    headers: { 'Cache-Control': 'no-store' },
+    headers: { "Cache-Control": "no-store" },
   });
 }
 
@@ -45,13 +44,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "Invalid name" }, { status: 400 });
   }
 
-  if (!redis) {
-    return NextResponse.json({ ok: false, error: "Redis unavailable" }, { status: 503 });
-  }
-
   if (password === null || password === undefined || password === "") {
     // Clear custom password
-    await redis.del(redisKey(name));
+    try {
+      await getRedis().del(redisKey(name));
+    } catch {
+      return NextResponse.json({ ok: false, error: "Redis unavailable" }, { status: 503 });
+    }
     return NextResponse.json({ ok: true, action: "cleared" });
   }
 
@@ -59,6 +58,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "Password too short" }, { status: 400 });
   }
 
-  await redis.set(redisKey(name), password);
+  try {
+    await getRedis().set(redisKey(name), password);
+  } catch {
+    return NextResponse.json({ ok: false, error: "Redis unavailable" }, { status: 503 });
+  }
   return NextResponse.json({ ok: true, action: "saved" });
 }

@@ -1,4 +1,4 @@
-import { redis } from "@/lib/redis";
+import { getRedis } from "@/lib/redis";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -55,12 +55,9 @@ export async function getPageVideo(
   page: string,
   locale: "en" | "zh"
 ): Promise<PageVideo | null> {
-  if (!redis) {
-    return null;
-  }
-
   try {
     const key = videoKey(page, locale);
+    const redis = getRedis();
     // @upstash/redis returns the parsed JSON value directly when it was stored
     // as a JSON string via set(key, JSON.stringify(value)).
     const raw = await redis.get<PageVideo>(key);
@@ -70,8 +67,7 @@ export async function getPageVideo(
     }
 
     return raw;
-  } catch (err) {
-    console.error(`[videos] Failed to fetch video config for ${page}/${locale}:`, err);
+  } catch {
     return null;
   }
 }
