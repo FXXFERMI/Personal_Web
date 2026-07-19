@@ -7,11 +7,17 @@ import FlipCard from "@/components/flip-card";
 import { Highlighter } from "@/components/ui/highlighter";
 import { useTheme } from "@/components/theme-provider";
 import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import PageVideoComponent from "@/components/page-video";
+import type { PageVideo } from "@/lib/videos";
 
 export default function Home() {
   const t = useTranslations('home');
   const { theme } = useTheme();
   const [highlightColor, setHighlightColor] = useState("#FFF978");
+  const params = useParams();
+  const locale = (params?.locale as "en" | "zh") ?? "en";
+  const [pageVideo, setPageVideo] = useState<PageVideo | null>(null);
 
   useEffect(() => {
     const updateColor = () => {
@@ -32,6 +38,13 @@ export default function Home() {
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
   }, [theme]);
+
+  useEffect(() => {
+    fetch(`/api/video?page=home&locale=${locale}`)
+      .then((r) => r.json())
+      .then((data) => setPageVideo(data?.video ?? null))
+      .catch(() => {/* silently skip if API is unavailable */});
+  }, [locale]);
 
   return (
     <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] px-4 py-8">
@@ -89,6 +102,13 @@ export default function Home() {
             />
           </div>
         </div>
+
+        {/* Page Video — only rendered when a video is configured in Redis */}
+        {pageVideo && (
+          <div className="mt-12 animate-fade-in-up animation-delay-800">
+            <PageVideoComponent video={pageVideo} className="max-w-3xl mx-auto" />
+          </div>
+        )}
 
         {/* Contact Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import LogoLoop from '@/components/LogoLoop';
 
 interface ImageGalleryProps {
   images: string[];
@@ -241,7 +242,7 @@ export default function About() {
           <div className="container max-w-5xl">
             <div className="section-card p-6 md:p-10 rounded-2xl border border-border bg-card/50 backdrop-blur-sm">
               <h2 className="text-4xl md:text-5xl font-semibold mb-8 flex items-center gap-4">
-                <span className="animate-float text-5xl">🌟</span>
+                <img src="/Fermi_前.png" alt="Fermi" className="animate-float w-12 h-12 object-contain" />
                 {t('aboutMeTitle')}
               </h2>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-4 mb-8">
@@ -251,7 +252,19 @@ export default function About() {
                   </p>
                 ))}
               </div>
-              <ImageGallery images={dailyImages} alt="Daily life" />
+              <div className="mt-6 overflow-hidden rounded-lg">
+                <LogoLoop
+                  logos={dailyImages.map(src => ({ src, alt: 'Daily life', height: 250 }))}
+                  speed={50}
+                  direction="left"
+                  logoHeight={250}
+                  gap={24}
+                  pauseOnHover={true}
+                  scaleOnHover={false}
+                  fadeOut={false}
+                  ariaLabel="Daily life photos"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -261,7 +274,7 @@ export default function About() {
           <div className="container max-w-5xl">
             <div className="section-card p-6 md:p-10 rounded-2xl border border-border bg-card/50 backdrop-blur-sm">
               <h2 className="text-4xl md:text-5xl font-semibold mb-8 flex items-center gap-4">
-                <span className="animate-float text-5xl" style={{ animationDelay: '0.5s' }}>💻</span>
+                <img src="/Fermi_前.png" alt="Fermi" className="animate-float w-12 h-12 object-contain" style={{ animationDelay: '0.5s' }} />
                 {t('workTitle')}
               </h2>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-4 mb-8">
@@ -271,7 +284,19 @@ export default function About() {
                   </p>
                 ))}
               </div>
-              <ImageGallery images={teachingImages} alt="Teaching and work" />
+              <div className="mt-6 overflow-hidden rounded-lg">
+                <LogoLoop
+                  logos={teachingImages.map(src => ({ src, alt: 'Teaching and work', height: 250 }))}
+                  speed={50}
+                  direction="right"
+                  logoHeight={250}
+                  gap={24}
+                  pauseOnHover={true}
+                  scaleOnHover={false}
+                  fadeOut={false}
+                  ariaLabel="Teaching and work photos"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -281,7 +306,7 @@ export default function About() {
           <div className="container max-w-5xl">
             <div className="section-card p-6 md:p-10 rounded-2xl border border-border bg-card/50 backdrop-blur-sm">
               <h2 className="text-4xl md:text-5xl font-semibold mb-8 flex items-center gap-4">
-                <span className="animate-float text-5xl" style={{ animationDelay: '1s' }}>🐾</span>
+                <img src="/Fermi_前.png" alt="Fermi" className="animate-float w-12 h-12 object-contain" style={{ animationDelay: '1s' }} />
                 {t('nonTechTitle')}
               </h2>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-4 mb-8">
@@ -291,7 +316,19 @@ export default function About() {
                   </p>
                 ))}
               </div>
-              <ImageGallery images={catImages} alt="My cat Twenty" />
+              <div className="mt-6 overflow-hidden rounded-lg">
+                <LogoLoop
+                  logos={catImages.map(src => ({ src, alt: 'My cat Twenty', height: 250 }))}
+                  speed={50}
+                  direction="left"
+                  logoHeight={250}
+                  gap={24}
+                  pauseOnHover={true}
+                  scaleOnHover={false}
+                  fadeOut={false}
+                  ariaLabel="Photos of my cat Twenty"
+                />
+              </div>
             </div>
           </div>
         </section>
